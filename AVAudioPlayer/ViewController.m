@@ -33,6 +33,7 @@
     else {
         _audioPlayer.delegate = self;
         [_audioPlayer prepareToPlay];
+        _audioPlayer.enableRate = YES;
     }
     
     [self setup];
@@ -48,18 +49,31 @@
     [self.view addSubview:_volControl];
     
     UIButton *playButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    playButton.frame = CGRectMake(120, 230, 120, 60);
+    playButton.frame = CGRectMake(65, 230, 120, 60);
     [playButton addTarget:self action:@selector(play:) forControlEvents:UIControlEventTouchUpInside];
     [playButton setTitle:@"Play" forState:UIControlStateNormal];
     playButton.userInteractionEnabled = YES;
     [self.view addSubview:playButton];
     
     UIButton *stopButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    stopButton.frame = CGRectMake(120, 320, 120, 60);
+    stopButton.frame = CGRectMake(185, 230, 120, 60);
     [stopButton addTarget:self action:@selector(stop:) forControlEvents:UIControlEventTouchUpInside];
     [stopButton setTitle:@"Stop" forState:UIControlStateNormal];
     stopButton.userInteractionEnabled = YES;
     [self.view addSubview:stopButton];
+    
+    UIButton *slowRateButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    slowRateButton.frame = CGRectMake(65, 269, 120, 60);
+    [slowRateButton addTarget:self action:@selector(slowRate:) forControlEvents:UIControlEventTouchUpInside];
+    [slowRateButton setTitle:@"Slow" forState:UIControlStateNormal];
+    slowRateButton.userInteractionEnabled = YES;
+    [self.view addSubview:slowRateButton];
+    
+    UIButton *ogRateButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    ogRateButton.frame = CGRectMake(185, 269, 120, 60);
+    [ogRateButton addTarget:self action:@selector(ogRate:) forControlEvents:UIControlEventTouchUpInside];
+    [ogRateButton setTitle:@"Original Value" forState:UIControlStateNormal];
+    [self.view addSubview:ogRateButton];
     
 }
 #pragma mark AVAudioPlayerDelegate Protocol Methods
@@ -70,7 +84,13 @@
         _audioPlayer.volume = _volControl.value;
     }
 }
-
+- (IBAction)slowRate:(id)sender{
+    _audioPlayer.rate = 0.5f;
+}
+-(IBAction)ogRate:(id)sender{
+    _audioPlayer.rate = 1.0f;
+    _audioPlayer.currentTime = 0.0;
+}
 - (IBAction)play:(id)sender{
     [_audioPlayer play];
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C4916F61A42308300017637 /* 01 You Can Count On Me.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 5C4916F51A42308300017637 /* 01 You Can Count On Me.m4a */; };
 		5CD936EC1A38BB8300400142 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD936EB1A38BB8300400142 /* main.m */; };
 		5CD936EF1A38BB8300400142 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD936EE1A38BB8300400142 /* AppDelegate.m */; };
 		5CD936F21A38BB8300400142 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD936F11A38BB8300400142 /* ViewController.m */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C4916F51A42308300017637 /* 01 You Can Count On Me.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "01 You Can Count On Me.m4a"; sourceTree = "<group>"; };
 		5CD936E61A38BB8300400142 /* AVAudioPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVAudioPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CD936EA1A38BB8300400142 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5CD936EB1A38BB8300400142 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 		5CD936E91A38BB8300400142 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5C4916F51A42308300017637 /* 01 You Can Count On Me.m4a */,
 				5CD9370F1A38BDB100400142 /* AVFoundation.framework */,
 				5CD937111A38BF1500400142 /* DRUM_LOOP_FOR_MATTHEW.mp3 */,
 				5CD936EA1A38BB8300400142 /* Info.plist */,
@@ -209,6 +212,7 @@
 				5CD936F51A38BB8300400142 /* Main.storyboard in Resources */,
 				5CD936FA1A38BB8300400142 /* LaunchScreen.xib in Resources */,
 				5CD936F71A38BB8300400142 /* Images.xcassets in Resources */,
+				5C4916F61A42308300017637 /* 01 You Can Count On Me.m4a in Resources */,
 				5CD937121A38BF1500400142 /* DRUM_LOOP_FOR_MATTHEW.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,6 +426,7 @@
 				5CD9370B1A38BB8300400142 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5CD9370C1A38BB8300400142 /* Build configuration list for PBXNativeTarget "AVAudioPlayerTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +435,7 @@
 				5CD9370E1A38BB8300400142 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
